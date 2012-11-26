@@ -1,0 +1,28 @@
+
+<p style = "margin-left: 50px; margin-top: 50px">
+	<button class = "but2"  onclick= "javscript:location='/book/list_books'"> List Books </button>
+	<span class= "tab1">
+	</span><button class = "but2"  onclick= "javscript:location='/book/add_book'"> Add Book </button>
+	<span class= "tab1">
+	</span><button class = "but2"  onclick= "javscript:location='/book/update_book'">  Update Book</button>
+	<span class= "tab1">
+	</span><button class = "but2"  onclick= "javscript:location='/book/remove_book'"> Delete Book </button>
+	<span class= "tab1">
+	</span><button class = "but2"  onclick= "javscript:location='/main/welcome'"> Main Menu </button>
+
+</p>
+
+<p style= "position: absolute; top: 120px; left: 50px">
+
+	<b> Book Statistics </b>
+	<br><br>
+	<table border =1>
+
+		<tr text-align= center><th height= "30" width= "300">Details</th><th width= "200">Statistics</th><tr>
+		<tr><td>Number of Books<td><%= @book_count %></td></tr>
+		<tr><td>Number of Books Borrowed<td><%= @borrowed_books %></td></tr>
+		<tr><td>Number of Books Available<td><%= @book_count - @borrowed_books %></td></tr>
+
+	</table>
+
+</p>

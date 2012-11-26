@@ -1,0 +1,18 @@
+<h3 style = "position: absolute; left: 30px; top: 20px">Current Employees </h3>
+<p style = "position: absolute; left: 30px; top: 30px; align: center" >
+
+<br><br>
+
+	<% @employees.each do |e| %>
+	<tr>
+	<%= "#{e.fname}" %> <pre> </pre><%= "#{e.lname}" %>
+	 <br>
+
+	<% end %>
+</table>
+</p>
+<p style = "position:relative; left: 850px; top: 500px; align: center" >
+
+	<button onClick ="javascript:location= '/main/welcome'" style = "position: relative; left: 30px">Cancel</button>
+
+</p>

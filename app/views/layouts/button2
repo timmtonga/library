@@ -1,0 +1,25 @@
+.bf_button {  
+  display:block; 
+  background: url(/web/buttons/20121114_378041/bf_button_fon_right.gif) no-repeat 100%; 
+  float: left; 
+  outline: none; 
+  padding-right: 32px; 
+  text-decoration: none; 
+ } 
+
+.bf_button:hover {  
+  text-decoration: none; 
+} 
+
+.bf_button span{  
+  display:block; 
+  background: url(/web/buttons/20121114_378041/bf_button_fon_left.gif) no-repeat;  
+  white-space: nowrap; 
+  line-height: 53px; 
+  padding: 0 0 0 32px; 
+  font-family: Arial, Verdana; 
+  font-size: 21px; 
+  font-weight: normal;  
+  color: rgb(0,0,0);  
+  text-transform: none;  
+ }

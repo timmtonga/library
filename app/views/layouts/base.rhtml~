@@ -1,0 +1,30 @@
+<html>
+
+	<head>
+		<title> <%= @page_title %> </title>
+		<link rel ="stylesheet" type="text/css" href= "myButton.css" />
+	<style> 
+		span.tab{  padding: 0 192px; /* Or desired space*/} 	
+		span.tab1{  padding: 0 30px; /* Or desired space*/} 
+		span.tab2{  padding: 0 100px; /* Or desired space*/}
+		pos.pos1 { position: relative; left: 30px; top: 300px }
+		pos.pos2 { position: relative; left: 60px; top: 300px }
+		div.fixed{ padding-top: 0.2; padding-left: 0.7cm;float:left;height: 380px;width:1000px;left:20px; top: 30px; border: 4px solid black; 			overflow: scroll}
+		button.but {bold; font-size: 12pt; text-align: center; background-image: url(/images/1.gif); background-color: transparent; border: 			none; font-family: arial; color: white; height: 50px; width: 150px } 
+ 		.but1 {bold; font-size: 12pt; text-align: center; background-image: url(/images/rect.gif); background-color: transparent; 			border: none; font-family: arial; color: white; height: 44px; width: 130px }
+ 		.but2 {bold; font-size: 12pt; text-align: center; background-image: url(/images/5.gif); background-color: transparent; 			border: none; font-family: arial; color: white; height: 49px; width: 150px }
+
+	 </style>  
+
+	
+	</head>
+
+	<body style =" background-color: black ">
+	<p ><font color = "yellow" size = "8"><pre>              Baobab Health Library System</pre> </font></p>
+	<div style= "background: darkgoldenrod; width :1100px; height :580px; overflow:hidden; 
+	position: absolute; left: 70px; top: 40px; margin:30px; border: 2px dotted orange">
+	<%= @content_for_layout %>
+	</div>
+			
+	</body>
+</html>

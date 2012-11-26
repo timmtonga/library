@@ -1,0 +1,15 @@
+<h3 style = "position: absolute; left: 30px; top: 20px">Current Employees </h3>
+
+<div class= "fixed" style = "position: absolute; left: 30px; top: 80px; align: center">
+	<% @employees.each do |e| %>
+ Name: <%= "#{e.fname} #{e.lname}" %>, Department: <%= "#{e.dept}" %>. <%= link_to 'Delete', :controller => "employee", :action => "delete", :id => e.id %> 
+<br><br>
+<% end%>
+
+</div>
+
+<p style = "position:absolute; left: 2px; top: 480px; align: center" >
+
+	<button class= "but1" onClick ="javascript:location= '/main/welcome'" style = "position: relative; left: 30px">Main Menu</button>
+
+</p>

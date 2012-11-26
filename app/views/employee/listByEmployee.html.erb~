@@ -1,0 +1,28 @@
+<div style = "position: absolute; top: 20px; left: 330px" >
+
+	<font color= lawngreen size = 6>Current Baobab Employees</font>
+
+</div>
+<br><br><br><br> &nbsp;&nbsp;&nbsp;&nbsp;
+<font size = 4 ><b> Order By</b> </font>
+<input type= "radio" name= "order_by" value = "dept"> Department
+<span class= "tab1"> </span>
+<input type= "radio" name= "order_by" value = "fname"> First Name
+<span class= "tab1"> </span>
+<input type= "radio" name= "order_by" value = "lname"> Surname
+
+
+
+<div class = "fixed" style = "position: absolute; left: 30px; top: 130px; align: center" >
+	<table border= "1">
+		<tr>
+			<th width = "350px">Name<th width = "250px">Department</th>
+		</tr>
+		
+	</table>	
+
+</div>
+<p style = "position: absolute; left: 0px; top: 510px; align: center" >
+	<button class="but1" onClick ="javascript:location= '/main/employees'" style = "position: relative; left: 30px">Back</button>
+
+</p>

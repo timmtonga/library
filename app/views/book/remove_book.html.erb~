@@ -1,0 +1,29 @@
+<p style = "text-align: center">
+ <font size= "6" color = lawngreen	> Delete Book </font>
+<p>
+
+<h3 style = "position: absolute; left: 30px; top: 20px">Books Currently In Register </h3>
+
+
+<p style = "position: absolute; left: 30px; top: 30px; align: center" >
+
+<br><br>
+
+	<div class ="fixed" style = "position: absolute; left: 30px; top: 80px; align: center" >
+	<% @books.each do |e| %>
+	
+	 <%= "#{e.title}" %>, <%= "#{e.author}" %>, <%= "#{e.classmark}" %> <%= link_to 'Delete', :controller => "book", :action => "delete_book_rec", :id => e.id %> 
+	<br><br>
+	<% end %>
+
+	
+	</div>
+
+</p>
+<p style = "position: absolute; top: 480px; align: center" >
+
+
+
+	<button class="but1" onClick ="javascript:location= '/main/welcome'" style = "position: relative; left: 30px">Main Menu</button>
+
+</p>

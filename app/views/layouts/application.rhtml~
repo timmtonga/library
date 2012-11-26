@@ -1,0 +1,16 @@
+<html>
+
+	<head>
+		<title> <%= page_title %> </title>
+	</head>
+
+	<body style =" background-color: black ">
+		
+
+	<div style= "background: olive; width :900px; height :650px; 
+	position: absolute; left: 150px; top: 30">
+	<%= @content_for_layout %>
+	</div>
+			
+	</body>
+</html>

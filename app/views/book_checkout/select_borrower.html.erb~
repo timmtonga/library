@@ -1,0 +1,18 @@
+<p style = "position: relative; left: 30px; top: 30px; align: center" >
+
+		Current Employees	<br><br>
+		<% @employees.each do |c| %>
+			<%= link_to c.fname + " " + c.lname,:controller => "book_checkout", :action => 'borrow_book', :id => "c.id" ,:book => @bookid %> <%= @bookid %>
+			<br>
+		<% end %>
+
+</p>
+
+
+<p style = "position: absolute; left: 350px; top: 70px; align: center" >
+
+	<button onClick ="javascript:location= '/main/welcome'" style = "position: relative; left: 30px">Cancel</button>
+
+</p>
+
+

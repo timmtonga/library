@@ -1,0 +1,25 @@
+
+<% @book_id %> <% @empid %>
+<p style = "position: absolute; left: 30px; top: 30px; align: center" >
+Available Books 
+<br><br>
+
+
+
+	<% @books.each do |e| %>
+	
+		<%= e.title %> (<%= e.classmark %>)
+		<%= e.id %>
+		<%= link_to "Check Out", :controller => "book_checkout", :action => "select_borrower", :id => e.id %>    
+		<br>
+         <% end %>
+
+
+</p>
+<p style = "position: absolute; left: 850px; top: 500px; align: center" >
+
+	<button class = "but1" onClick ="javascript:location= '/main/welcome'" style = "position: relative; left: 30px">Cancel</button>
+
+</p>
+
+

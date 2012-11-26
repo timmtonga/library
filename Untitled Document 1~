@@ -1,0 +1,5 @@
+<p style = "position: relative; left: 30px; top: 30px; align: center" >
+
+		<% @employees.each do |c| %>
+			<%= link_to c.fname + " " + c.lname, :action => '', :empid => c.id%> 
+		<% end %>

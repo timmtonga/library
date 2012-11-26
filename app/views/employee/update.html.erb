@@ -1,0 +1,47 @@
+<script type="text/javascript">
+function submitForm(){
+document.forms[0].submit
+}
+</script>
+<% form_for :employee, :url => {:controller =>:employee, :action => :update_emp, :id => @emp.id } do |form| %>
+
+	<P style = "position: absolute; left: 300px; top: 0px; align: center" >
+		
+			<font size = "6" color = lawngreen>Update Employee Details</font>
+			
+	</p>
+
+	<P style = "position: absolute; left: 30px; top: 35px; align: center" >
+		<br>
+		<font size = "5">Enter details for employee</font>
+		<br><br>	
+		<b> Employee Name </b> 	 
+		<p style = "position: relative; left: 240px; top: 100px; align: center" >
+		<%= form.text_field :fname, :size => "15", :value => @emp.fname %>
+		</p>
+		<p style = "position: relative; left: 30px; top: 120px; align: center" >
+		<b> Employee Surname </b> 
+		<p style = "position: relative; left: 240px; top: 80px; align: center" >	 
+		<%= form.text_field :lname, :size => "15", :value => @emp.lname %>
+		<br><br><br><br><br></p>	
+		<p style = "position: relative; left: 30px; top: 30px; align: center" >
+		<b> Employee Department </b> 	 
+		</p>
+		<p style = "position: relative; left: 240px; top: -10px;  align: center" >
+		<%= form.select :dept, ["Operations", "Administration", "Software Development", "Support"] %>
+		<br><br>	
+		</p>
+		<br>
+		<button class= "but1" onClick ="submitForm();"style = "position: relative; left: 300px; top: 10px">Update</button>	
+		
+	</P>
+
+
+<% end %>
+<p style = "position: absolute; top: 310px; left: 250px; align: center" >
+
+	<button class= "but1" onClick ="javascript:location= '/employee/update_employee'" style = "position: relative; left: -220px; top:10px">Cancel</button>
+
+</p>
+
+

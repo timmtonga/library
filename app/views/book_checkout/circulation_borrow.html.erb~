@@ -1,0 +1,88 @@
+<script src= "/javascripts/sorttable.js" type= "text/javascript"></script>
+<script type="text/javascript">
+function submitForm(){
+document.forms[0].submit
+}
+</script>
+
+<style>
+.available_books {
+  width: 1000px;
+  margin-left: 20px; 
+  border: 3px solid;
+}
+
+div {
+ overflow: auto;
+ height: 340px;
+ width: 100px
+ position:absolute;
+ top: 10px;
+}
+
+td, th {
+  border-style: solid;
+  border-width: 1px;
+}
+
+tbody{
+  overflow: scroll;
+}
+
+strong { text-align: center; }
+</style>
+
+
+<p style = "text-align: center; ">
+		<font size ="5"><b>Book Check-Out<b> </font> <br><br>
+Available Books
+</p>
+<div>
+<table class="available_books">
+<thead>
+
+
+<tr>
+  <th>Class mark</th>
+  <th>Title</th>
+  <th>Author</th>
+  <th>&nbsp;</th>
+</tr>
+</thead>
+<form method="post" action="/book_checkout/borrow_book">
+<tfoot>
+<% @checkedout.each do |book| %>
+ <tbody style = "overflow: scroll;" > 
+ <tr>
+    <td><%=book.classmark%></td>
+    <td><%=book.title%></td>
+    <td><%=book.author%></td>
+    <td style= "text-align: center;">
+       <input type="checkbox" name="titles[<%=book.id%>]" id="<%=book.id%>" />
+    </td>
+  </tr>
+ </tbody>
+<tfoot>
+<%end%>
+</table>
+
+</div>
+<br />
+<p style = "position: absolute; top: 440px; left: 20px; align: center" >
+<b>Listed Employees</b>
+
+<%= collection_select (:employee,:id, @employees,:id,:fullname ) %>
+<br><br><br>
+<input class ="but1"  type="submit" value = "Borrow" />
+</P>
+</form>
+
+<p style = "position: absolute; top: 510px; left: 150px; align: center" >
+
+
+
+	<button class = "but1" onClick ="javascript:location= '/main/welcome'" style = "position: relative; left: 20px; top: -5px">Main Menu</button>
+
+</p>
+
+

@@ -1,0 +1,25 @@
+<script src= "/javascripts/sorttable.js" type= "text/javascript"></script>
+
+<div style = "position: absolute; top: 20px; left: 350px" >
+
+	<font color= lawngreen size = 6>Books In Baobab Library</font>
+
+</div>
+<div class = "fixed" style = "position: absolute; left: 30px; top: 130px; align: center" >
+<table class="sortable" border= "1" " cellspacing="0" cellpadding="3">
+		<tr >
+			<th width = "250px">Title <th width = "250px">Classmark <th width = "250px">Author</th>
+			<% @books.each do |book| %>
+				<tr><td class= "new"> <%= book.title%><td text-align= "center"><%= book.classmark %> <td> <%= book.author %> </td></tr>
+			<% end %>
+		
+		
+	</table>
+
+</div>
+
+<p style = "position: absolute; left: 0px; top: 510px; align: center" >
+
+		<button class="but1" onClick ="javascript:location= '/main/book'" style = "position: relative; left: 30px">Back</button>
+
+</p>

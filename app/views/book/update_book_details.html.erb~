@@ -1,0 +1,50 @@
+<script type="text/javascript">
+function submitForm(){
+document.forms[0].submit
+}
+</script>
+
+<% form_for :book, :url => {:controller =>:book, :action => :save_update, :id=> @book.id } do |form| %>
+	<p style = "text-align= center; position: relative; left:450px">
+		<font size ="5"><b>Update Book Details<b> </font>
+	</p>
+	<P style = "position: absolute; left: 30px; top: 40px" >
+		
+		<font size = "4">Enter new book details</font>
+		<br><br><br>
+		<b> Book Title </b> 	 
+		<p style= "position: relative; left: 200px; top: 57px"> 	 
+		<%= form.text_field :title, :size =>30,:value => @book.title %>
+		</p>
+		<p style= "position: relative; left: 30px; top: 80px"> 	 
+		<b> Book Classmark </b>
+		<p style= "position: relative; left: 200px; top: 40px"> 	 
+		      <%= form.text_field :classmark, :size =>30, :value => @book.classmark%>
+		</p>
+		<br><br>	
+		<p style= "position: relative; left: 30px;"> 	 
+		<b> Book Author </b> 	 
+		<p style= "position: relative; left: 200px; top: -40px"> 	 
+		<%= form.text_field :author,:size =>30, :value => @book.author %>
+		<br><br>	
+		</p>
+		<p style= "position: relative; left: 30px; top: -40px"> 	 
+		<b> Book Category </b> 	 
+		<p style= "position: relative; left: 200px; top: -80px"> 	 
+		<%= form.select :category, {"Programming" => "1", "Design" => "2", "Engineering" => "3", "Project Management" => "4", "General" => "5" }%>
+		<br><br><br><br>	
+		</p>
+		<button class= "but1" onClick ="submitForm();" style = "position: relative; top:-43px; left: 250px">Update Book</button>	
+ 		
+	</p>
+
+<p style = "position: absolute; top: 410px; left: 30px; align: center" >
+
+	<button class= "but1" onclick= "javscript:location='/main/book'" style = "position: relative; left: -0px"> Back </button>
+
+
+</p>
+
+<% end %>
+
+

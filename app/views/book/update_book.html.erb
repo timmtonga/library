@@ -1,0 +1,26 @@
+<p style = "text-align: center">
+ <font size= "6" color = lawngreen> Update Book </font>
+<p>
+
+
+<h3 style = "position: absolute; left: 30px; top: 20px">Books Currently In Register </h3>
+<br><br>
+
+
+	<div class ="fixed" style = "position: absolute; left: 30px; top: 80px; align: center" >
+	
+	<% @books.each do |e| %>
+		<%= e.title %> (<%= e.classmark %>) 
+		<%= link_to "Update", :controller => "book", :action => "update_book_details", :id => e.id %> <br><br>
+         <% end %>
+	
+	</div>
+
+
+<p style = "position: absolute; top: 480px; left: 0px; align: center" >
+
+	<button class= "but1" onClick ="javascript:location= '/main/welcome'" style = "position: relative; left: 200px">Main Menu</button>
+	<button class= "but1" onclick= "javscript:location='/main/book' " style = "position: relative; left: -110px"> Back </button><br><br>
+
+</p>
+

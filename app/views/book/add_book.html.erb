@@ -1,0 +1,55 @@
+<script type="text/javascript">
+
+function validate (){
+	if (document.forms.title.value == null ||document.form.title.value ==" ")
+	{
+		alert("The book title cannot be blank")
+	}
+}
+function submitForm(){
+document.forms[0].submit
+}
+</script>
+
+<% form_for :book, :url => {:controller =>:book, :action => :save_book} do |form| %>
+
+	<P style = "position: absolute; left: 30px; top: 30px" >
+		
+		<font size = "6" color = lawngreen>Add Book</font>
+		<br><br>
+		<b> Book Title </b> 	 
+		<p style= "position: relative; left: 200px; top: 87px"> 	 
+		<%= form.text_field :title, :size =>30, :placeholder => 'Enter book title...' %>
+		</p>
+		<p style= "position: relative; left: 30px; top: 100px"> 	 
+		<b> Book Classmark </b>
+		<p style= "position: relative; left: 200px; top: 60px"> 	 
+		      <%= form.text_field :classmark, :size =>30, :placeholder => 'Enter book classmark...' %>
+		</p>
+		<br><br>	
+		<p style= "position: relative; left: 30px; top: 20px"> 	 
+		<b> Book Author </b> 	 
+		<p style= "position: relative; left: 200px; top: -20px"> 	 
+		<%= form.text_field :author,:size =>30, :placeholder => 'Enter book author...' %>
+		<br><br>	
+		</p>
+		<p style= "position: relative; left: 30px; top: -25px"> 	 
+		<b> Book Category </b> 	 
+		<p style= "position: relative; left: 200px; top: -65px"> 	 
+		<%= form.select :category, {"Programming" => "1", "Design" => "2", "Engineering" => "3", "Project Management" => "4", "General" => "5" }%>
+		<br><br><br><br>	
+		</p>
+		<button class= "but1" onClick ="validate();" style = "position: relative; top:-19px; left: 250px">Add Book</button>	
+ 		
+		
+	</P>
+
+
+<% end %>
+<p  style = "position: absolute; top: 385px; left: 1-0px; align: center" >
+
+
+
+	<button class = "but1" onClick ="javascript:location= '/main/book'" style = "position: relative; left: 30px">Cancel</button>
+
+</p>

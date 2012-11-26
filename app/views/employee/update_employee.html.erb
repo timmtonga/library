@@ -1,0 +1,23 @@
+<P style = "position: absolute; left: 300px; top: 0px; align: center" >
+		
+		<font size = "6" color = lawngreen>Update Employee Details</font>
+</p>
+<h3 style = "position: absolute; left: 30px; top: 20px">Current Employees </h3>
+
+
+<br><br>
+<div class= "fixed" style = "position: absolute; left: 30px; top: 80px; align: center">
+	<% @employees.each do |e| %>
+	<%= "#{e.fname}" %> <%= "#{e.lname}" %> 
+	<%= link_to "Update", :controller => "employee", :action => "update", :id => e.id %>
+	 <br><br>
+
+	<% end %>
+</div>
+
+<p style = "position:absolute; left: 2px; top: 480px; align: center" >
+
+	<button class= "but1" onClick ="javascript:location= '/main/employees'" style = "position: relative; left: 30px">Back</button>
+	<button class= "but1" onClick ="javascript:location= '/main/welcome'" style = "position: relative; left: 90px">Main Menu</button>
+
+</p>
