@@ -13,6 +13,15 @@ class MainController < ApplicationController
 	@page_title = "Baobab Health Library Management- Employees"
 	@emp_count = Employee.count()
 	@dept_count = Employee.count("distinct dept")
+	@borrowers = BookCheckout.count ("distinct employee_id")
+  end
+
+  def stats
+	@page_title = "Baobab Health Library Management- Stock Statistics"
+  end
+
+  def stocks
+	@page_title = "Baobab Health Library Management- Stock List"
   end
 
 end

@@ -10,7 +10,7 @@ class BookController < ApplicationController
 
 	if @book.save
         	flash[:notice] = "Book details successfully added"
-		redirect_to :controller => "main", :action => "welcome"
+		redirect_to :controller => "book", :action => "add_book"
 	else
         	flash[:notice] = "Book details could not be saved"
 		redirect_to :controller => "book", :action => "add_book"

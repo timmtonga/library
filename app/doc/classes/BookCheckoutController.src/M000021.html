@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>return_book (BookCheckoutController)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File controllers/book_checkout_controller.rb, line 36</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">return_book</span>
+        <span class="ruby-comment cmt"># this method retrieves all records of books that where checked and and the people that borrowed them</span>
+        <span class="ruby-ivar">@page_title</span> = <span class="ruby-value str">&quot;Baobab Health Library Manager - Return Book&quot;</span>
+        <span class="ruby-ivar">@borrowed_id</span> = <span class="ruby-constant">BookCheckout</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">:all</span>) 
+        <span class="ruby-ivar">@book_checkouts</span> = <span class="ruby-constant">Book</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">:all</span>, <span class="ruby-identifier">:joins</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">:book_checkout</span>])
+
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

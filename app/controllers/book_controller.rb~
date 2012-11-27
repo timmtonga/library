@@ -39,7 +39,7 @@ class BookController < ApplicationController
 	#this method is for saving changes that have been made to book details
 	@books = Book.find (params[:id])
 
-	if @books.update_attributes (params[:book])
+	if @books.update_attributes(params[:book])
         	flash[:notice] = "Book details successfully updated"
 		redirect_to :controller => "main", :action => "welcome"
 	else

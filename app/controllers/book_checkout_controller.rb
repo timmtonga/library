@@ -1,9 +1,11 @@
+#= This is the class that defines all operations for handling book checkouts and returns
+
 class BookCheckoutController < ApplicationController
 
-
-
   def circulation_borrow
-	# this method displays all the available books at the time and a list of all the employees that can borrow books
+
+	#++ this method displays all the available books at the time and a list of all the employees that can borrow books
+
 	@page_title = "Baobab Health Library Manager - Borrow Book"
 	@books = Book.find (:all)
 	@checkedout = []
@@ -11,7 +13,7 @@ class BookCheckoutController < ApplicationController
 	@employees = Employee.find(:all)
   end
   def borrow_book 
-	#this method gets details of a book that is being checked out and records the details of the checkout in the db
+	# this method gets details of a book that is being checked out and records the details of the checkout in the db
 	employee_id = params[:employee][:id]
         books = params[:titles]
 	(books || []).each do |book_id, value|
@@ -32,7 +34,7 @@ class BookCheckoutController < ApplicationController
   end
 
   def return_book
-	#this method retrieves all records of books that where checked and and the people that borrowed them
+	# this method retrieves all records of books that where checked and and the people that borrowed them
 	@page_title = "Baobab Health Library Manager - Return Book"
 	@borrowed_id = BookCheckout.find(:all)	
 	@book_checkouts = Book.find(:all, :joins => [:book_checkout])

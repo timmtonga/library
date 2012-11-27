@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+  <title>borrow_book (BookCheckoutController)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre><span class="ruby-comment cmt"># File controllers/book_checkout_controller.rb, line 15</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">borrow_book</span> 
+        <span class="ruby-comment cmt"># this method gets details of a book that is being checked out and records the details of the checkout in the db</span>
+        <span class="ruby-identifier">employee_id</span> = <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:employee</span>][<span class="ruby-identifier">:id</span>]
+        <span class="ruby-identifier">books</span> = <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:titles</span>]
+        (<span class="ruby-identifier">books</span> <span class="ruby-operator">||</span> []).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">book_id</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+          <span class="ruby-ivar">@book_checkdout</span> = <span class="ruby-constant">BookCheckout</span>.<span class="ruby-identifier">new</span> <span class="ruby-comment cmt">#(params[:book_checkout])</span>
+          <span class="ruby-ivar">@book_checkdout</span>.<span class="ruby-identifier">book_id</span> = <span class="ruby-identifier">book_id</span>
+          <span class="ruby-ivar">@book_checkdout</span>.<span class="ruby-identifier">employee_id</span> = <span class="ruby-identifier">employee_id</span>
+          <span class="ruby-ivar">@book_checkdout</span>.<span class="ruby-identifier">borrow_date</span> = <span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>()
+          <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@book_checkdout</span>.<span class="ruby-identifier">save</span>
+                       <span class="ruby-identifier">flash</span>[<span class="ruby-identifier">:notice</span>] = <span class="ruby-value str">&quot;Book(s) successfully checked out&quot;</span>
+          <span class="ruby-keyword kw">else</span>
+                       <span class="ruby-identifier">flash</span>[<span class="ruby-identifier">:notice</span>] = <span class="ruby-value str">&quot;Book(s) checkout unsuccessful&quot;</span>
+          <span class="ruby-keyword kw">end</span>
+
+        <span class="ruby-keyword kw">end</span>
+
+        <span class="ruby-identifier">redirect_to</span> <span class="ruby-identifier">:controller</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;book_checkout&quot;</span>, <span class="ruby-identifier">:action</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;circulation_borrow&quot;</span>
+
+  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

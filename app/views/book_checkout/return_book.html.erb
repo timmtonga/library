@@ -10,9 +10,9 @@
 <br>
 <table class ="sortable" border= 2px width = 980px >
 	<th>Classmark<th>Date Borrowed<th>Book Title<th>Borrower<th>Borrower's Department <th></tr>
-	<tr><% @book_checkouts.each do |e| %><td>
+	<tr height= 5px><% @book_checkouts.each do |e| %><td>
 	<%= "#{e.classmark}" %><td><%= e.book_checkout.borrow_date %> <td><%= e.title %><td><%= e.employee.fname %> <%= e.employee.lname %><td><%= e.employee.dept %><td> 
-	<%= link_to "Return", :controller => "book_checkout", :action => "returnbook", :id => e.book_checkout.id %>
+	<%= button_to "Return", :controller => "book_checkout", :action => "returnbook", :id => e.book_checkout.id %>
 	</td></tr> 
 	<% end %>
 </table>

@@ -17,11 +17,11 @@ ActiveRecord::Schema.define(:version => 20121116122358) do
     t.string  "borrow_date", :limit => 45
   end
 
-  add_index "book_checkouts", ["book_id"], :name => "fk_book_cheackouts_1"
-  add_index "book_checkouts", ["employee_id"], :name => "fk_book_cheackouts_2"
+  add_index "book_checkouts", ["book_id"], :name => "fk_book_checkouts_1"
+  add_index "book_checkouts", ["employee_id"], :name => "fk_book_checkouts_2"
 
   create_table "books", :force => true do |t|
-    t.string "title",     :limit => 25, :null => false
+    t.string "title",     :limit => 45, :null => false
     t.string "author",    :limit => 25
     t.string "classmark", :limit => 10
     t.string "category",  :limit => 45

@@ -4,6 +4,12 @@ class Book < ActiveRecord::Base
 	validates_presence_of :title, :author, :category, :classmark 
 	validates_uniqueness_of :classmark
 
- 
+ 	def availability
+		if (self.book_checkout.nil?)
+			"Available"
+		else
+			"Not Available"
+		end
+	end
 
 end

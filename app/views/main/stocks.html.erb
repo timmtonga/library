@@ -1,0 +1,15 @@
+<p style= "text-align: center;">
+	<font size= "5"><b>Stock List </b></font>
+</p>
+<div class= "fixed" style = "height: 460px; width:1000px; position: relative;left:30px; top: -10px	 ">
+	<table id = "stocks" class= "sortable" border="1" cell-padding = "0px" width= "950px">
+		<tr><th>Item Title<th>Author<th>Classmark<th>Status</th></tr>
+		<% @books.each do |book| %>
+		<tr><td><%= book.title %><td> <%= book.author %><td><%= book.classmark %><td> <%= book.availability %></td></tr>
+		<% end %>
+	</table>
+</div>
+<p>
+	<button class= "but1" style="position:relative; left:750px">Print </button> <span class= "tab1"></span>
+	<button class= "but1" style="position:relative; left:740px" onClick="javascript:location='/main/tools'">Back </button>
+</p>

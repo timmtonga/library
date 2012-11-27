@@ -1,5 +1,7 @@
-
-<p style = "margin-left: 50px; margin-top: 50px">
+<p style = "text-align: center; ">
+		<font size ="5"><b>Book Check-Out<b> </font> 
+</p>
+<p style = "margin-left: 50px; margin-top: 10px">
 	<button class = "but2" onclick= "javscript:location='/employee/list_employee'"> List Employees </button>
 	<span class= "tab1">
 	</span><button class = "but2" onclick= "javscript:location='/employee/add_employee'"> Add Employee </button>
@@ -18,7 +20,7 @@
 	<br><br>
 	<table border =1>
 
-		<tr text-align= center><th height= "30" width= "500">Details</th><th width= "200">Statistics</th><tr>
+		<tr text-align= center><th height= "30" width= "400">Details</th><th width= "200">Statistics</th><tr>
 		<tr><td>Number of Employees<td><%= @emp_count %></td></tr>
 		<tr><td>Number of Departments with Employees<td><%= @dept_count %></td></tr>
 		<tr><td>Number of Employees with Books<td><%= @borrowers %></td></tr>

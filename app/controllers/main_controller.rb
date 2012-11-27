@@ -16,4 +16,13 @@ class MainController < ApplicationController
 	@borrowers = BookCheckout.count ("distinct employee_id")
   end
 
+  def stats
+	@page_title = "Baobab Health Library Management- Stock Statistics"
+  end
+
+  def stocks
+	@page_title = "Baobab Health Library Management- Stock List"
+	@books = Book.find(:all)
+  end
+
 end

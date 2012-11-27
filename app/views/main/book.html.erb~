@@ -1,6 +1,8 @@
-
-<p style = "margin-left: 50px; margin-top: 50px">
-	<button class = "but2"  onclick= "javscript:location='/main/welcome'"> List Books </button>
+<p style = "text-align: center; ">
+		<font size ="5"><b>Books Main Page<b> </font> <br><br>
+</p>
+<p style = "margin-left: 50px; margin-top: -10px">
+	<button class = "but2"  onclick= "javscript:location='/book/list_books'"> List Books </button>
 	<span class= "tab1">
 	</span><button class = "but2"  onclick= "javscript:location='/book/add_book'"> Add Book </button>
 	<span class= "tab1">
@@ -25,4 +27,8 @@
 
 	</table>
 
+</p>
+
+<p style= "position:absolute; top:500px; left: 900px">
+	<button class = "but1"  onclick= "javscript:location='/main/welcome'"> Back </button>
 </p>

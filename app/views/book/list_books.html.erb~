@@ -5,7 +5,7 @@
 	<font color= lawngreen size = 6>Books In Baobab Library</font>
 
 </div>
-<div class = "fixed" style = "position: absolute; left: 30px; top: 130px; align: center" >
+<div class = "fixed" style = "position: absolute; left: 30px; top: 80px; align: center" >
 <table class="sortable" border= "1" " cellspacing="0" cellpadding="3">
 		<tr >
 			<th width = "250px">Title <th width = "250px">Classmark <th width = "250px">Author</th>

@@ -2,9 +2,10 @@ class CreateEmployees < ActiveRecord::Migration
   def self.up
     create_table :employees do |t|
 
-	      t. column : fname,  :string
-	      t. column : lname,  :string
-	      t. column : dept,  :string
+	    t. column :fname,  :string
+	    t. column :lname,  :string
+	    t. column :dept,  :string
+	    t. column :admin, :bool
 
     end
   end
