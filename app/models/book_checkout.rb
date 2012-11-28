@@ -3,4 +3,15 @@ class BookCheckout < ActiveRecord::Base
 	belongs_to :employee
 	validates_presence_of :book_id, :employee_id
 	validates_uniqueness_of :book_id
+	
+	def self.get_overdues
+		book = []
+		checkedout = BookCheckout.find(:all)
+		checkedout.each do |checked|
+			if ((Time.now.to_date - checked.borrow_date.to_date) > 14)
+				book << checked
+			end
+		end
+		return book
+	end
 end

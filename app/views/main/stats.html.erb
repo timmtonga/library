@@ -1,0 +1,18 @@
+
+<p style= "position: relative; top: 50px; left: 50px">
+
+	<table id="stats" border =1>
+		<caption><h4>Stock Statistics as at <%= Time.now.to_date.to_s(:long) %> </h4> </caption>
+		<tr text-align= center><th height= "30" width= "300">Details</th><th width= "200">Statistics</th><tr>
+		<tr><td>Total Items Registered<td><%= @book_count %></td></tr>
+		<tr><td>Items Borrowed<td><%= @borrowed_books %></td></tr>
+		<tr><td>Items Available<td><%= @book_count - @borrowed_books %></td></tr>
+
+	</table>
+
+</p>
+
+<p>
+	<button class= "but1" style="position:absolute;top:500px; left:950px" onclick="printDiv('stats')">Print </button> 
+	<button class= "but1" style="position:absolute;top:500px; left:750px" onClick="javascript:location='/main/tools'">Back </button>
+</p>

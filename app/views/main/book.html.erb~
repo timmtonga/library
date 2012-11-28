@@ -10,7 +10,7 @@
 	<span class= "tab1">
 	</span><button class = "but2"  onclick= "javscript:location='/book/remove_book'"> Delete Book </button>
 	<span class= "tab1">
-	</span><button class = "but2"  onclick= "javscript:location='/main/welcome'"> Main Menu </button>
+	</span><button class = "but2"  onclick= "javscript:location='/main/welcome'"> Search </button>
 
 </p>
 

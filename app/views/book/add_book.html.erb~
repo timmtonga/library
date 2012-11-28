@@ -46,7 +46,7 @@ document.forms[0].submit
 
 
 <% end %>
-<p  style = "position: absolute; top: 390px; left: 1-0px; align: center" >
+<p  style = "position: absolute; top: 385px; left: 1-0px; align: center" >
 
 
 

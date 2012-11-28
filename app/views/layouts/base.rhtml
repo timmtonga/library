@@ -16,7 +16,19 @@
 
 	 </style>  
 
+	<script>
+		function printDiv(id)
+		{
+		  var divToPrint=document.getElementById(id);
+		  newWin= window.open("");
+		  newWin.document.write(divToPrint.outerHTML);
+		  newWin.print();
+		  newWin.close();
+
+		}
+	</script>
 	<script src= "/javascripts/sorttable.js" type= "text/javascript"></script>
+
 	</head>
 
 	<body style =" background-color: black ">

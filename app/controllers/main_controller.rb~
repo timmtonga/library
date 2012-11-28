@@ -18,10 +18,46 @@ class MainController < ApplicationController
 
   def stats
 	@page_title = "Baobab Health Library Management- Stock Statistics"
+	@book_count = Book.count()
+	@borrowed_books = BookCheckout.count()
   end
 
   def stocks
 	@page_title = "Baobab Health Library Management- Stock List"
+	@books = Book.find(:all)
   end
+
+  def availableItems
+	@page_title = "Baobab Health Library Management- Available Items"
+	@books = Book.find (:all)
+	@available = []
+	@books.each { |book| @available << book if book.book_checkout.nil? }
+  end
+
+  def borrowedItems
+	@page_title = "Baobab Health Library Management- Borrowed Items"
+	@checkedOut = BookCheckout.find(:all)
+  end
+
+  def overdue
+	@page_title = "Baobab Health Library Management- Overdue Items"
+	@items = BookCheckout.get_overdues()
+  end
+  
+  def printStock
+	@books = Book.find(:all)
+	pdftable = Prawn::Document.new
+	pdftable.render_file "stock_report.pdf"
+	
+	Prawn::Document.generate("stock_report.pdf") do |pdftable|
+		pdftable.table([["Item Title", "Author","Classmark"]]
+		:column_widths => {0 => 80, 1 => 80, 2 => 80, 3 => 80}, :row_colors => ["d5d5d5"])
+
+		 @books.each do|u|
+		 pdftable.table(["#{u.title}","#{u.author}","#{u.classmark}"],:column_widths => {0 => 80, 1 => 80, 2 => 80, 3 => 80 }, :row_colors => ["ffffff"])
+
+	end
+  end
+
 
 end

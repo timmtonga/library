@@ -3,21 +3,25 @@
 		<font size ="5"><b>Tools<b> </font> 
 </p>
 
-<p style = "margin-left: 50px; margin-top: 10px">
-	<button class = "but2" onclick= "javscript:location='/main/tools'"> Book Reports </button>
-	<span class= "tab1">
-	</span><button class = "but2" onclick= "javscript:location='/main/tools'"> System Settings </button>
-	<span class= "tab1">
-	</span><button class = "but2"  onclick= "javscript:location='/main/welcome'"> Main Menu </button>
 
-</p>
 
-<div id="details" style= "position:relative; left: 40px; top:30px;border:2px solid;width : 1000px; height: 350px; overflow: auto ">
+<div id="details" style= "position:relative; left: 40px; top:30px;border:2px solid;width : 1000px; height: 400px; overflow: auto ">
 	
-	<table border= "0">
-		<tr><td width ="200px"><button class = "but1"  onclick= "javscript:location='/main/stocks'"> Stock List </button>
-		<td><button class = "but1"  onclick= "javscript:location='/main/stats'"> Stock Statistics </button>
-		</tr>
+	<table style= "border:0px solid; margin: 40px">
+		<tr><td width ="250px" height = "100px"><button class = "but2"  onclick= "javscript:location='/main/stocks'"> Stock List </button>
+		<td width ="250px"><button class = "but2"  onclick= "javscript:location='/main/availableItems'"> Available Items </button>
+		<td width ="250px"><button class = "but2"  onclick= "javscript:location='/main/borrowedItems'"> Borrowed Items </button>
+		<td width ="250px"><button class = "but2"  onclick= "javscript:location='/main/overdue'"> Overdue Items </button>
+		</tr><tr>
+		<td width ="250px"><button class = "but2"  onclick= "javscript:location='/main/stats'">Item Statistics  </button>
+		<td width ="250px"height = "100px"><button class = "but2"  onclick= "javscript:location='/main/tools'">Add Administrator</button>
+		<td width ="250px"><button class = "but2"  onclick= "javscript:location='/main/tools'"> Edit  Administrators</button>
+		<td width ="250px"><button class = "but2"  onclick= "javscript:location='/main/tools'"> System Settings </button>
+		
 
 	</table>
 </div>
+
+<p style = "position: relative;top:30px; left: 915px">
+<button class = "but1"  onclick= "javscript:location='/main/welcome'"> Back </button>
+</p>

@@ -1,0 +1,19 @@
+<p style = "text-align: center; ">
+		<font size ="5"><b>Available Items<b> </font> 
+</p>
+
+<div class= "fixed" style = "height: 460px; width:1000px; position: relative;left:30px; top: -10px">
+	<table id = "available" class= "sortable" border="1" cell-padding = "5px" width= "950px">
+		<caption><h4>Available Items as at <%= Time.now.to_date.to_s(:long) %></h4></caption>
+		<tr><th>Item Title<th>Author<th>Classmark</th></tr>
+		<% @available.each do |book| %>
+		<tr><td><%= book.title %><td> <%= book.author %><td> <%= book.classmark %></td></tr>
+		<% end %>
+	</table>
+</div>
+<p>
+
+	<button class= "but1" style="position:relative; left:700px" onclick="printDiv('available')">Print </button> <span class= "tab1"></span>
+	<button class= "but1" style="position:relative; left:740px" onClick="javascript:location='/main/tools'">Back </button>
+</p>
+
